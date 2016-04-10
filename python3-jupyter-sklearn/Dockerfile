@@ -15,4 +15,10 @@ RUN pip3 install scipy>=0.17.0
 ADD requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
-ADD matplotlibrc /root/.config/matplotlib/matplotlibrc
+ENV TINI_VERSION v0.9.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+RUN chmod +x /tini
+
+EXPOSE 8888
+ENTRYPOINT ["/tini", "--"]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0"]
