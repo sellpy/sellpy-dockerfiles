@@ -10,9 +10,8 @@ PACKAGES=$(xargs <<EOF
 build-essential
 curl
 
-python3-setuptools
 python3-dev
-python3-numpy
+python3-setuptools
 python3-wheel
 
 gfortran
@@ -29,6 +28,8 @@ libxft-dev
 libxml2-dev
 libxslt-dev
 zlib1g-dev
+
+ttf-bitstream-vera
 EOF
 )
 
