@@ -13,3 +13,5 @@ RUN pip3 install scipy
 
 ADD requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
+
+ADD matplotlibrc /root/.config/matplotlib/matplotlibrc
