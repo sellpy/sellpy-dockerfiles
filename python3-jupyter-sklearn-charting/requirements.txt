@@ -1,0 +1,4 @@
+SQLAlchemy>=1.0.11
+google-api-python-client>=1.5.0
+iplotter>=0.3.0
+pivottablejs>=0.1.0
