@@ -1,0 +1,6 @@
+jupyter:
+  image: sellpy/python3-jupyter-sklearn
+  environment:
+    PORT: 8888
+  ports:
+    - '8888:8888'

@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-MAINTAINER Fabian Linzberger <e@lefant.net>
 
 ADD install.sh /tmp/install.sh
 RUN sudo sh /tmp/install.sh
@@ -19,6 +18,6 @@ ENV TINI_VERSION v0.9.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 
-EXPOSE 8888
-ENTRYPOINT ["/tini", "--"]
-CMD ["jupyter", "notebook", "--ip=0.0.0.0"]
+ADD run.sh /
+
+ENTRYPOINT ["/tini", "--", "/run.sh"]
