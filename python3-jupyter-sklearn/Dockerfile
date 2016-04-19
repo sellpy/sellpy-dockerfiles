@@ -27,4 +27,5 @@ RUN chmod +x /tini
 
 ADD run.sh /
 
-ENTRYPOINT ["/tini", "--", "/run.sh"]
+ENTRYPOINT ["/tini", "--"]
+CMD ["/run.sh"]
