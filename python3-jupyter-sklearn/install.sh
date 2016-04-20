@@ -9,6 +9,7 @@ apt-get upgrade -y
 PACKAGES=$(xargs <<EOF
 build-essential
 curl
+git
 
 python3-dev
 python3-setuptools
