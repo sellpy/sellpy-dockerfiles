@@ -26,6 +26,7 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 
 ADD run.sh /
+RUN chmod +x /run.sh
 
 ENTRYPOINT ["/tini", "--"]
 CMD ["/run.sh"]
