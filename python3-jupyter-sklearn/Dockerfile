@@ -8,7 +8,7 @@ ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
 ADD install.sh /tmp/install.sh
-RUN sudo sh /tmp/install.sh
+RUN sh -e /tmp/install.sh
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
     python3 get-pip.py && \
