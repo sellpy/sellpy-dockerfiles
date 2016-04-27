@@ -1,7 +1,7 @@
 FROM sellpy/python3-jupyter-sklearn:latest
 
 ADD install.sh /tmp/install.sh
-RUN sudo sh /tmp/install.sh
+RUN sh -e /tmp/install.sh
 
 RUN mkdir /app
 WORKDIR /app
