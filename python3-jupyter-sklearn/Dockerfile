@@ -21,6 +21,9 @@ RUN pip3 install scipy>=0.17.0
 ADD requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
+RUN pip3 install git+git://github.com/hyperopt/hyperopt.git
+RUN pip3 install git+git://github.com/msmbuilder/osprey.git
+
 ENV TINI_VERSION v0.9.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
