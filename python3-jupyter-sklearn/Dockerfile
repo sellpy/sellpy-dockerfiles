@@ -7,6 +7,10 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
+ENV TINI_VERSION v0.9.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+RUN chmod +x /tini
+
 ADD install.sh /tmp/install.sh
 RUN sh -e /tmp/install.sh
 
@@ -21,9 +25,9 @@ RUN pip3 install scipy>=0.17.0
 ADD requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
-ENV TINI_VERSION v0.9.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
-RUN chmod +x /tini
+RUN pip3 install git+git://github.com/hyperopt/hyperopt.git
+RUN pip3 install git+git://github.com/msmbuilder/osprey.git
+RUN pip3 install git+git://github.com/lyst/lightfm.git
 
 ADD run.sh /
 RUN chmod +x /run.sh
