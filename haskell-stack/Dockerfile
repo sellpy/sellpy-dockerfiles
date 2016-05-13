@@ -17,6 +17,5 @@ RUN chmod +x /tini
 ADD sellpy.cabal /app/
 ADD stack.yaml /app/
 WORKDIR /app
-RUN stack init --force
 RUN stack setup
 RUN stack build
