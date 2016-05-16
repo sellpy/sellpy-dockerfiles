@@ -17,6 +17,7 @@ library
    , wai
    , http-types
    , aeson, aeson-pretty, scientific
+   , wreq
    , array
    , regex-tdfa
   default-language:    Haskell2010
