@@ -6,6 +6,7 @@ google-api-python-client>=1.5.0
 gunicorn>=19.4.5
 iplotter>=0.3.0
 jupyter>=1.0.0
+lightfm>=1.8
 lime>=0.1.1.5
 matplotlib>=1.5.1
 networkx>=1.11

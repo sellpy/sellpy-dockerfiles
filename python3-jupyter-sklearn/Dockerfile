@@ -27,7 +27,8 @@ RUN pip3 install -r /tmp/requirements.txt
 
 RUN pip3 install git+git://github.com/hyperopt/hyperopt.git
 RUN pip3 install git+git://github.com/msmbuilder/osprey.git
-RUN pip3 install git+git://github.com/lyst/lightfm.git
+# settle for lightfm 1.8 via requirements.txt for now
+#RUN pip3 install git+git://github.com/lyst/lightfm.git
 
 ADD run.sh /
 RUN chmod +x /run.sh
