@@ -1,7 +1,9 @@
+Flask>=0.10.1
 SQLAlchemy>=1.0.11
 XlsxWriter>=0.8.4
 boto3>=1.3.0
 google-api-python-client>=1.5.0
+gunicorn>=19.4.5
 iplotter>=0.3.0
 jupyter>=1.0.0
 lime>=0.1.1.5
