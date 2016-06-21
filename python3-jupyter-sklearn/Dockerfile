@@ -33,5 +33,4 @@ RUN pip3 install git+git://github.com/msmbuilder/osprey.git
 ADD run.sh /
 RUN chmod +x /run.sh
 
-ENTRYPOINT ["/tini", "--"]
 CMD ["/run.sh"]
