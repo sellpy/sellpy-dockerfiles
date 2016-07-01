@@ -21,3 +21,4 @@ sklearn-pandas>=1.1.0
 statsmodels>=0.6.1
 xlrd>=0.9.4
 xlwt>=1.0.0
+psycopg2>=2.6.1

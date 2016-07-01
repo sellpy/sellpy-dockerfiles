@@ -14,6 +14,7 @@ git
 python3-dev
 python3-setuptools
 python3-wheel
+python-psycopg2
 
 gfortran
 swig
@@ -25,6 +26,7 @@ liblapack-dev
 libncurses5-dev
 libopenblas-dev
 libpng12-dev
+libpq-dev
 libxft-dev
 libxml2-dev
 libxslt-dev
