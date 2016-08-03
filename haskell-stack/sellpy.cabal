@@ -20,4 +20,7 @@ library
    , wreq
    , array
    , regex-tdfa
+   , mongoDB
+   , servant
+   , servant-server
   default-language:    Haskell2010
