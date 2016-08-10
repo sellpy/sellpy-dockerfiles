@@ -9,6 +9,9 @@ library
   hs-source-dirs:      src
   build-depends:
      base
+   , amazonka
+   , amazonka-dynamodb
+   , bson-lens
    , transformers, mtl
    , bytestring, text
    , lens, lens-aeson
