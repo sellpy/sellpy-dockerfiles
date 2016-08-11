@@ -19,6 +19,7 @@ library
    , containers
    , hashable
    , http-types
+   , iso8601-time
    , lens
    , lens-aeson
    , mongoDB
