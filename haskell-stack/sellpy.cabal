@@ -30,6 +30,7 @@ library
    , transformers, mtl
    , unordered-containers
    , wai
+   , wai-cors
    , warp
    , wreq
   default-language:    Haskell2010
