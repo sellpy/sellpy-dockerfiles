@@ -30,6 +30,7 @@ library
    , servant
    , servant-server
    , transformers, mtl
+   , time
    , unordered-containers
    , wai
    , wai-cors
