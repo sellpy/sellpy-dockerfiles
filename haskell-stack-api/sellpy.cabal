@@ -17,6 +17,7 @@ library
    , bson-lens
    , bytestring, text
    , containers
+   , criterion
    , hashable
    , http-types
    , iso8601-time
