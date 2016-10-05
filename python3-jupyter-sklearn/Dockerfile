@@ -7,6 +7,8 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
+ENV PYTHONUNBUFFERED 1
+
 ENV TINI_VERSION v0.9.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +rx /tini
