@@ -27,7 +27,7 @@ RUN pip3 install scipy>=0.17.0
 ADD requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
-RUN pip3 install git+git://github.com/hyperopt/hyperopt.git
+RUN pip3 install --upgrade git+git://github.com/lefant/hyperopt.git
 RUN pip3 install git+git://github.com/msmbuilder/osprey.git
 # settle for lightfm 1.8 via requirements.txt for now
 #RUN pip3 install git+git://github.com/lyst/lightfm.git

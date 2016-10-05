@@ -17,6 +17,7 @@ library
    , bson-lens
    , bytestring, text
    , containers
+   , criterion
    , hashable
    , http-types
    , iso8601-time
@@ -24,10 +25,12 @@ library
    , lens-aeson
    , mongoDB
    , regex-tdfa
+   , resource-pool
    , scientific
    , servant
    , servant-server
    , transformers, mtl
+   , time
    , unordered-containers
    , wai
    , wai-cors
