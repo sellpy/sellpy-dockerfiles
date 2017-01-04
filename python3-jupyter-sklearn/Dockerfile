@@ -7,6 +7,8 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
+ENV PYTHONUNBUFFERED 1
+
 ENV TINI_VERSION v0.9.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +rx /tini
@@ -25,7 +27,7 @@ RUN pip3 install scipy>=0.17.0
 ADD requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
-RUN pip3 install git+git://github.com/hyperopt/hyperopt.git
+RUN pip3 install --upgrade git+git://github.com/lefant/hyperopt.git
 RUN pip3 install git+git://github.com/msmbuilder/osprey.git
 # settle for lightfm 1.8 via requirements.txt for now
 #RUN pip3 install git+git://github.com/lyst/lightfm.git

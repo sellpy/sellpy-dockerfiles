@@ -13,6 +13,7 @@ git
 
 python3-dev
 python3-setuptools
+python3-tk
 python3-wheel
 python-psycopg2
 
