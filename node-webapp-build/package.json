@@ -2,7 +2,8 @@
   "name": "sellpy-deps",
   "private": true,
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "build": "gulp build-dev"
   },
   "engines": {
     "node": "5.7.x"
@@ -54,7 +55,6 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.1",
     "glob": "^7.0.0",
-    "gulp": "^3.9.1",
     "gulp-bg": "0.0.8",
     "gulp-eslint": "^2.0.0",
     "gulp-shell": "^0.5.2",
@@ -118,10 +118,13 @@
     "url-loader": "^0.5.5",
     "useragent": "^2.1.7",
     "validator": "^5.0.0",
+    "yargs": "^4.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
     "webpack": "^1.12.14",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.1.0",
-    "yargs": "^4.1.0"
-  },
-  "devDependencies": {}
+    "standard": "^7.1.2"
+  }
 }
