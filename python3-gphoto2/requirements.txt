@@ -24,3 +24,5 @@ xlwt>=1.0.0
 psycopg2>=2.6.1
 requests>=2.12.4
 gphoto2>=1.5.1
+exifread>=2.1.2
+scikit-image>=0.12.3
