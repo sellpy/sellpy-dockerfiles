@@ -8,4 +8,3 @@ RUN pip3 install -r /tmp/requirements.txt
 
 RUN mkdir /app
 WORKDIR /app
-ADD photo.py photo.py
