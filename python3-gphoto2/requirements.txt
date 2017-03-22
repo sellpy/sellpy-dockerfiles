@@ -27,3 +27,4 @@ gphoto2>=1.5.1
 exifread>=2.1.2
 scikit-image>=0.12.3
 pillow>=3.3.0
+opencv-python>=3.2.0.6
