@@ -6,6 +6,7 @@
     "start": "NODE_PATH=$NODE_PATH:./lib node server.js"
   },
   "dependencies": {
+    "aws-kcl": "^0.6.0",
     "algoliasearch": "^3.22.1",
     "winston": "^2.3.1",
     "winston-papertrail": "^1.0.4"
