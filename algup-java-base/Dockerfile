@@ -10,5 +10,6 @@ WORKDIR /app/amazon-kinesis-client-python
 RUN python3 setup.py install
 
 WORKDIR /app
+ADD package.json .
 RUN npm install && cache clean
 
