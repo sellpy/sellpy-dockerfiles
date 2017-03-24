@@ -1,0 +1,18 @@
+{
+  "name": "algup-java-base",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "NODE_PATH=$NODE_PATH:./lib node server.js"
+  },
+  "dependencies": {
+    "algoliasearch": "^3.22.1",
+    "winston": "^2.3.1",
+    "winston-papertrail": "^1.0.4"
+  },
+  "devDependencies": {
+
+  },
+  "engines": {
+    "node": "6.10.0"
+  }
+}
