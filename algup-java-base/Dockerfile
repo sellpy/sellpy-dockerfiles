@@ -11,5 +11,5 @@ RUN python3 setup.py install
 
 WORKDIR /app
 ADD package.json .
-RUN npm install && cache clean
+RUN npm install && npm cahe clean
 
