@@ -1,4 +1,5 @@
-FROM docker/compose:1.9.0
+FROM ubuntu:16.04
 
-RUN sudo apt-get update
-RUN sudo apt-get install git
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update
+RUN apt-get -y install git curl
