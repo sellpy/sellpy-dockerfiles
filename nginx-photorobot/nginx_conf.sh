@@ -23,3 +23,7 @@ http {
   } 
 
 }' > nginx.conf
+
+cp nginx.conf /etc/nginx/nginx.conf
+
+/usr/sbin/nginx -g "daemon off;"
