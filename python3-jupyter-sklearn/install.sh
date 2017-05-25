@@ -17,6 +17,8 @@ python3-tk
 python3-wheel
 python-psycopg2
 
+locales
+
 gfortran
 swig
 libagg-dev

@@ -1,12 +1,6 @@
 FROM ubuntu:latest
 
 # enable utf-8 locale
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
-ENV LANG en_US.UTF-8
-
 ENV PYTHONUNBUFFERED 1
 
 ENV TINI_VERSION v0.9.0
@@ -15,6 +9,13 @@ RUN chmod +rx /tini
 
 ADD install.sh /tmp/install.sh
 RUN sh -e /tmp/install.sh
+
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
     python3 get-pip.py && \
