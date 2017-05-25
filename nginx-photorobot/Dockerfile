@@ -1,3 +1,3 @@
 FROM nginx
 
-COPY nginx.conf /etc/nginx/nginx.conf
+ADD nginx_conf.sh nginx_conf.sh

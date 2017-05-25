@@ -1,5 +1,8 @@
+#!/bin/sh -e
 
-events {
+port=$1
+
+echo 'events {
   worker_connections 1024;
 }
 
@@ -7,7 +10,7 @@ http {
 
   upstream web {
     ip_hash;
-    server photoweb:8080;
+    server photoweb:'$port';
   }
 
   # portal
@@ -15,8 +18,12 @@ http {
     location / {
       proxy_pass http://web/;
     }
-    listen 8080;
+    listen '$port';
     server_name localhost;
   } 
 
-}
+}' > nginx.conf
+
+cp nginx.conf /etc/nginx/nginx.conf
+
+/usr/sbin/nginx -g "daemon off;"
