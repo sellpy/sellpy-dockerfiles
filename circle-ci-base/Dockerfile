@@ -1,3 +1,3 @@
-FROM node:6.11
+FROM node:8.11
 
 RUN npm install -g heroku
