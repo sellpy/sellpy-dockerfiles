@@ -27,5 +27,12 @@ RUN cd ./drivers && tar -zxvf cupsdriver-1.2-56.tar.gz && cd cupsdriver-1.2-56 &
 # adds "MaxJobs 10000" to first line of cupsd.conf
 RUN sed -i '1s/^/MaxJobs 10000\n/' /etc/cups/cupsd.conf
 
+# Finally fixed the issue that I attempted to fix in
+# https://github.com/sellpy/sellpy-dockerfiles/commit/b573e7eb300b6fd93a793852f5928755402e120a (and made a workaround in later commits)
+# The issue was that a bug (https://bugs.launchpad.net/ubuntu/+source/cups/+bug/1747765)
+# was corrected in (https://launchpad.net/ubuntu/+source/cups/2.1.3-4ubuntu0.9) which made the "seconds" value to be working correctly
+# for PreserveJobFiles. And since the default value was 86400 (1 day) it broke our counter "Jobs in the printer queue".
+RUN sed -i '1s/^/PreserveJobFiles No\n/' /etc/cups/cupsd.conf
+
 ENTRYPOINT ["/tini", "--"]
 CMD ["/usr/sbin/cupsd", "-f"]
