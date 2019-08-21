@@ -23,5 +23,9 @@ RUN chmod +rx /tini
 ADD drivers ./drivers
 RUN cd ./drivers && tar -zxvf cupsdriver-1.2-56.tar.gz && cd cupsdriver-1.2-56 && ./build.sh
 
+# increase max jobs in queue (from default 500) to handle large batches (e.g. freight labels for standard containers)
+# adds "MaxJobs 10000" to first line of cupsd.conf
+RUN sed -i '1s/^/MaxJobs 10000\n/' /etc/cups/cupsd.conf
+
 ENTRYPOINT ["/tini", "--"]
 CMD ["/usr/sbin/cupsd", "-f"]
