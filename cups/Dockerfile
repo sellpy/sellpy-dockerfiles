@@ -34,5 +34,9 @@ RUN sed -i '1s/^/MaxJobs 10000\n/' /etc/cups/cupsd.conf
 # for PreserveJobFiles. And since the default value was 86400 (1 day) it broke our counter "Jobs in the printer queue".
 RUN sed -i '1s/^/PreserveJobFiles No\n/' /etc/cups/cupsd.conf
 
+# Also delete job history (d* files in /var/spool/cups are JobFiles and c* are JobHistory)
+# Delete in order to prevent memory usage from spiking resulting in slow prints (especially when MaxJobs was increased from 500 to 10000)
+RUN sed -i '1s/^/PreserveJobHistory No\n/' /etc/cups/cupsd.conf
+
 ENTRYPOINT ["/tini", "--"]
 CMD ["/usr/sbin/cupsd", "-f"]
