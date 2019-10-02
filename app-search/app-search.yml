@@ -1,0 +1,3 @@
+# Only override worker.threads since it can't be set properly through env
+# https://discuss.elastic.co/t/self-managed-app-search-docker-7-4-0-e-worker-threads-do-not-work/201941/2
+worker.threads: ${worker.threads:4}
