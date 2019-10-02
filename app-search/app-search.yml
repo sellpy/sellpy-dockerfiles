@@ -1,6 +1,7 @@
 # Sole purpose of this docker container is to fix worker.threads
 # https://discuss.elastic.co/t/self-managed-app-search-docker-7-4-0-e-worker-threads-do-not-work/201941/2
 allow_es_settings_modification: true
+app_search.listen_host: 0.0.0.0
 app_search.external_url: ${app_search.external_url:"0.0.0.0"}
 elasticsearch.host: ${elasticsearch.host:"http://elasticsearch:9200"}
 elasticsearch.username: ${elasticsearch.username:elastic}
