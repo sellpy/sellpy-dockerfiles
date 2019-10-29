@@ -14,7 +14,7 @@
     "bluebird": "^3.0.6",
     "body-parser": "~1.12.4",
     "crc": "^3.4.0",
-    "csv-parse": "^1.0.2",
+    "csv-parse": "^4.6.5",
     "csv-stringify": "^1.0.2",
     "diacritics": "^1.2.3",
     "dogapi": "^1.0.7",
