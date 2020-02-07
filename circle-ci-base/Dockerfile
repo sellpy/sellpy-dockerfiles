@@ -1,3 +1,4 @@
-FROM node:12.13
+FROM node:12.15
 
 RUN npm install -g heroku
+RUN npm install -g locize-cli
