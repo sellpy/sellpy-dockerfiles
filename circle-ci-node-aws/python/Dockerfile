@@ -16,7 +16,7 @@ RUN ./aws/install
 
 # Install Node 16
 RUN apt-get update
-RUN curl -sL https://deb.nodesource.com/setup_16.17 | bash -
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt -y install nodejs
 
 # Install docker
