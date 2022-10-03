@@ -1,1 +1,1 @@
-Use [this README](/circle-ci-base/README.md) instead
+For instructions, see [this README](/circle-ci-base/README.md)
