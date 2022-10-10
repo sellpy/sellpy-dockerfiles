@@ -1,1 +1,1 @@
-For instructions, see [this README](/circle-ci-base/README.md)
+For instructions, see [this README](/circle-ci-base/README.md) (just remember to change the tag name accordingly)
