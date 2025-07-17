@@ -21,5 +21,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: ./cups
+          file: ./cups/Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository }}:latest
