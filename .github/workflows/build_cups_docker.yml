@@ -3,7 +3,7 @@ run-name: Building CUPS docker image and pushing it to GitHub registry
 on:
   push:
     branches:
-      - master
+      - github-docker-builds
     paths:
       - "cups/**"
 jobs:
