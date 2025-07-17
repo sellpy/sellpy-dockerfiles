@@ -11,7 +11,6 @@ ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 
 ENV TERM xterm
-ENV foobar hejhej
 
 ADD install.sh /tmp/install.sh
 RUN sh -e /tmp/install.sh
