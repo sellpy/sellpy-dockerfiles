@@ -3,13 +3,14 @@ run-name: Building CUPS docker image and pushing it to GitHub registry
 on:
   push:
     branches:
-      - github-docker-builds
+      - master
     paths:
       - "cups/**"
 jobs:
   build_job:
     runs-on: ubuntu-latest
     steps:
+      # Checkout step usually not needed when using docker/build-push-action@v6, but necessary for using the relative paths in order to find the correct Dockerfile.
       - name: Checkout repo
         uses: actions/checkout@v4      
       - name: Login to GitHub Container Registry
