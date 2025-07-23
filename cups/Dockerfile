@@ -1,4 +1,4 @@
-# lock version to 16.04 in order to not get a cups version that doesn't delete job data files.
+# lock version to 16.04 in order to not get a cups version that doesn't delete job data files
 FROM ubuntu:16.04
 
 RUN apt-get clean && apt-get update && apt-get install -y locales
