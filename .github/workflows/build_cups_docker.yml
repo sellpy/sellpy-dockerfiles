@@ -27,4 +27,4 @@ jobs:
           context: ./cups
           file: ./cups/Dockerfile
           push: true
-          tags: ghcr.io/cups:latest
+          tags: ghcr.io/sellpy/cups:latest
