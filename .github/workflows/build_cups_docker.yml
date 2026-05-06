@@ -3,6 +3,7 @@ run-name: Building CUPS docker image and pushing it to GitHub registry
 on:
   push:
     branches:
+      - canary
       - master
     paths:
       - "cups/**"
@@ -19,6 +20,14 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set image tag variable
+        id: vars
+        run: |
+          if [[ ${{ github.ref_name }} == "master" ]]; then
+            echo "TAG=latest" >> $GITHUB_OUTPUT
+          else
+            echo "TAG=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          fi
       - name: Set up Docker Buildx # Needed by docker/build-push-action@v6 
         uses: docker/setup-buildx-action@v3
       - name: Build and push
@@ -27,4 +36,4 @@ jobs:
           context: ./cups
           file: ./cups/Dockerfile
           push: true
-          tags: ghcr.io/sellpy/cups:latest
+          tags: ghcr.io/sellpy/cups:${{ steps.vars.outputs.TAG }}
